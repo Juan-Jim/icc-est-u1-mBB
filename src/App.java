@@ -1,21 +1,26 @@
 import controllers.MetodoBuqueda;
+import java.util.Scanner;
 import models.Persona;
+import views.ShowConsole;
 
 public class App {
-    public static void main(String[] args)  {
-        Persona[] personas = new Persona[9];
-        personas[0] = new Persona("Pablo", 4);
-        personas[1] = new  Persona("Maria", 5);
-        personas[2] = new  Persona("Juan", 18);
-        personas[3] = new  Persona("David", 60);
-        personas[4] = new  Persona("Mateo", 25);
-        personas[5] = new  Persona("Diego", 12);
-        personas[6] = new  Persona("Ana", 8);
-        personas[7] = new  Persona("Alicia", 9);
-        personas[8] = new  Persona("Jaime", 40);
-
-
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ShowConsole console = new ShowConsole(scanner);
+        
+        int cantidad = console.inputCantidadPersonas();
+        Persona[] personas = new Persona[cantidad];
+        
+        for(int i = 0; i < cantidad; i++) {
+            System.out.println("\nDatos de la persona #" + (i+1));
+            String nombre = console.inputNombre();
+            int edad = console.inputEdadPersona();
+            personas[i] = new Persona(nombre, edad);
+        }
+        
         MetodoBuqueda buscar = new MetodoBuqueda(personas);
         buscar.showPersonByEdad();
+        
+        scanner.close();
     }
 }

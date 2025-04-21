@@ -17,4 +17,20 @@ public class ShowConsole {
     public void showMessage(String message) {
         System.out.println(message);
     }
+   
+    public String inputNombre() {
+        System.out.println("Ingrese el nombre: ");
+        scanner.nextLine(); 
+        return scanner.nextLine();
+    }
+    
+    public int inputEdadPersona() {
+        System.out.println("Ingrese la edad: ");
+        return scanner.nextInt();
+    }
+    
+    public int inputCantidadPersonas() {
+        System.out.println("¿Cuántas personas desea ingresar? ");
+        return scanner.nextInt();
+    }
 }
