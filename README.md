@@ -1,5 +1,5 @@
 
-# Práctica de Algoritmos de Ordenamiento
+# Práctica de Metodos de Busqueda
 
 ## 📌 Información General
 
@@ -14,15 +14,17 @@
 
 ## 🛠️ Descripción
 
-1. Crear Clase Persona con 2 atributos
+Aplicación que recibe un arreglo de personas con dos atributos (Edad y nombre) y un elemnto que es la edad a buscar con un esquema referente:
 
-    1.1 Nombre
+• Entrada:
+- Arreglo ingresado por teclado.
 
-    1.2 Edad
+- Ordenar el arreglo con el método que desee.
 
-2. Generar una aplicación que permita dado un arreglo, buscar una persona por su edad mediante la búsqueda binaria.
-Encontrando la pimera persona con dicha edad.
-Ingrese cantidad de Personas del listado: 9
+• Salida:
+- Arreglo en cada búsqueda, alto, bajo, valor de centro.
+- Elemento encontrado o no.
+- Indicar si va a buscar en el subarreglo de la derecha o izquierda.
 
 ---
 
@@ -38,7 +40,18 @@ Para ejecutar el proyecto:
     ```bash
     java App
     ```
-
+3. Ingresa la cantidad de personas
+    ```bash
+    Ingrese la cantidad de personas:
+    ```
+4. Ingresa los datos:
+    ```bash
+    Nombre:
+    Edad:
+    ```
+5. Edad a buscar:
+    ```bash
+    Ingrese la edad que desea buscar:
 ---
 
 ## 🧑‍💻 Ejemplo de SALIDA 
